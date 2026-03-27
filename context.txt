@@ -1,0 +1,840 @@
+================================================================================
+ECO-SOL ENERGIES — WEBSITE CONTEXT DOCUMENT
+For use by third-party software, AI tools, and content integrations
+Generated: 2026-03-24
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: COMPANY OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Company Name    : ECO-SOL ENERGIES
+Tagline         : WE BRIGHTEN UP YOUR HOMES
+Industry        : Solar Energy / Renewable Energy
+Location        : Karachi, Pakistan (serving clients nationwide)
+Founded         : 2014
+Email           : Ecosolenergiespak@gmail.com
+Phone           : +92 XXX XXXXXXX (Mon–Sat, 9:00 AM – 6:00 PM)
+Social Media    : Facebook, Twitter, Instagram, LinkedIn (links placeholder — "#")
+
+About the Company:
+ECO-SOL ENERGIES is Pakistan's premier solar energy company, headquartered in
+Karachi. Since 2014, they have been at the forefront of the country's
+transition to clean, renewable energy. They specialize in providing high-quality
+solar panels, advanced inverters, and complete solar power systems for
+residential, commercial, and industrial clients across Pakistan.
+
+Vision:
+  To be Pakistan's leading solar energy provider, empowering every home and
+  business with clean, sustainable, and affordable energy solutions.
+
+Mission:
+  To deliver premium solar solutions that exceed expectations, reduce energy
+  costs, and contribute to a cleaner, greener Pakistan.
+
+Core Values:
+  1. Quality First         — Never compromise on product and service quality.
+  2. Customer Focused      — Client satisfaction and energy goals are central.
+  3. Excellence            — Exceptional results on every project.
+  4. Innovation            — Staying ahead with the latest solar technology.
+
+Key Statistics / Achievements:
+  - 500+   Projects Completed
+  - 50MW+  Total Power Installed
+  - 98%    Client Satisfaction Rate
+  - 10+    Years of Experience
+  - 15+    Cities Served
+
+Company Milestones (Timeline):
+  2014 — Company Founded in Karachi
+  2017 — Completed 100th Solar Installation
+  2020 — Nationwide Expansion across Pakistan
+  2023 — Achieved 50MW+ Total Installed Capacity
+  2025 — Recognized as Industry Leader / Premium Solar Provider
+
+Why Choose ECO-SOL ENERGIES:
+  ✓ Premium Quality Products
+  ✓ 10+ Years Experience
+  ✓ Professional Installation
+  ✓ Nationwide Service
+  ✓ After-Sales Support
+  ✓ Competitive Pricing
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: WEBSITE TECHNICAL DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Framework       : React 18 (with TypeScript)
+Build Tool      : Vite 5
+Styling         : TailwindCSS v3
+Backend/Database: Supabase (PostgreSQL)
+Icons           : Lucide React
+Routing         : Client-side SPA (no React Router — custom page state)
+Language        : TypeScript / TSX
+
+Entry Points:
+  - index.html    → Root HTML shell
+  - src/main.tsx  → React DOM root render
+  - src/App.tsx   → Main App component, routing logic, page title management
+
+Project Structure:
+  src/
+  ├── App.tsx               (Main app, navigation state management)
+  ├── index.css             (Global base styles)
+  ├── main.tsx              (App bootstrap)
+  ├── vite-env.d.ts         (Vite type declarations)
+  ├── components/
+  │   ├── Header.tsx        (Top navigation bar)
+  │   └── Footer.tsx        (Site footer with links and contact info)
+  ├── lib/
+  │   └── supabase.ts       (Supabase client initialization)
+  └── pages/
+      ├── Home.tsx          (Homepage — hero, services, portfolio preview,
+      │                      why choose us, testimonials, FAQ, CTA)
+      ├── Services.tsx      (Detailed services page with 6 service sections)
+      ├── Portfolio.tsx     (Project showcase — 6 featured projects + stats)
+      ├── About.tsx         (Company story, vision, mission, values, timeline,
+      │                      team capabilities)
+      ├── Products.tsx      (Product catalog by category + trusted brands)
+      └── Contact.tsx       (Contact form + contact information)
+
+Navigation (Page IDs used in routing):
+  'home'      → Home Page
+  'services'  → Services Page
+  'portfolio' → Portfolio Page
+  'about'     → About Page
+  'products'  → Products Page
+  'contact'   → Contact Page
+
+Navigation Behaviour:
+  - The active page is stored in React state (currentPage).
+  - Navigating to a page calls handleNavigate(pageId) which:
+      1. Sets currentPage state.
+      2. Scrolls the window to the top smoothly.
+      3. Updates the document.title dynamically.
+  - Page title format: "ECO-SOL ENERGIES - Premium Solar Solutions Pakistan"
+    (for home) or "[Page Name] - ECO-SOL ENERGIES" (for all other pages).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: UI / UX — DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Color Palette:
+  Primary     : Green (#16a34a / green-600, green-700, green-800)
+  Accent      : Yellow (#facc15 / yellow-300, yellow-400)
+  Background  : White (#ffffff) / Light Gray (#f9fafb / gray-50)
+  Text        : Gray-900 (headings) / Gray-600 (body) / Gray-400 (secondary)
+  Dark BG     : Gray-900 (footer)
+
+Gradients used frequently:
+  - from-green-600 to-green-800  (CTAs, hero banners, footer sections)
+  - from-green-500 to-green-600  (icon backgrounds, cards)
+  - from-green-50 via-white to-yellow-50  (page hero backgrounds)
+  - bg-clip-text gradient on headings (green-600 → green-800) for visual flair
+
+Typography:
+  - Font display: Bold / font-bold (headings: 4xl–7xl)
+  - Body: text-lg to text-xl, text-gray-600, leading-relaxed
+  - Labels/small text: text-sm, font-medium, tracking-wide
+
+Layout:
+  - Max container width: max-w-7xl (centered with mx-auto)
+  - Padding: px-6 lg:px-8 (responsive horizontal padding)
+  - Grid system: TailwindCSS responsive grid (1 col → 2 col → 3/4 col)
+  - Spacing: py-16, py-20, py-24 between major page sections
+
+Common UI Components:
+  - Pill badges: bg-green-100 text-green-700 px-4 py-2 rounded-full
+  - CTA Buttons (primary): bg-gradient-to-r from-green-600 to-green-700,
+    white text, px-8 py-4 rounded-lg, shadow-lg, hover effects
+  - CTA Buttons (secondary): white bg, green border/text, hover:bg-green-50
+  - Cards: rounded-2xl, border-gray-100, hover:shadow-xl, transition-all
+  - Icons: Lucide React icons used throughout (size 20–48px)
+  - CheckCircle (green-600) used for feature/benefit lists
+  - Star (yellow-400 fill-current) used for testimonials ratings
+
+Animations & Interactions:
+  - Hover: shadow transitions, scale transforms on icon cards
+  - Underline nav link animation on hover (scale-x-0 → scale-x-100 via CSS)
+  - CTA button hover darkens gradient and increases shadow
+  - Cards: hover:shadow-2xl with duration-300 transition
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: HEADER COMPONENT (Navigation Bar)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/components/Header.tsx
+
+Behaviour:
+  - Fixed to top (position: fixed, z-50).
+  - On scroll > 20px: adds shadow and condenses padding (py-6 → py-4).
+  - Background: bg-white/95 (translucent white); becomes bg-white on scroll.
+
+Logo / Brand:
+  - Circle logo: gradient green background, bold yellow "E" letter.
+  - Company name: "ECO-SOL ENERGIES" (bold, gray-900).
+  - Tagline below name: "WE BRIGHTEN UP YOUR HOMES" (green-600, xs, tracking-wide).
+  - Clicking the logo navigates to 'home'.
+
+Desktop Navigation (hidden on mobile, shows on lg+):
+  Navigation items (in order):
+    1. Home      → navigates to 'home'
+    2. Services  → navigates to 'services'
+    3. Portfolio → navigates to 'portfolio'
+    4. About     → navigates to 'about'
+    5. Products  → navigates to 'products'
+    6. Contact   → navigates to 'contact'
+
+  Active page: text-green-600, underline bar visible (scale-x-100).
+  Inactive: text-gray-700, underline appears on hover (group-hover:scale-x-100).
+
+CTA Button (Desktop):
+  - Label: "Get Free Site Survey"
+  - Style: green gradient, rounded-lg, shadow-lg
+  - Action: navigates to 'contact'
+
+Mobile Navigation:
+  - Hamburger menu button (Menu icon) toggles mobile nav.
+  - When open: X icon shown, mobile menu drops below header.
+  - Mobile menu: same nav items in vertical flex layout.
+  - Same "Get Free Site Survey" CTA button at the bottom.
+  - Clicking a nav item also closes the mobile menu.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5: FOOTER COMPONENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/components/Footer.tsx
+
+Background: bg-gray-900 (dark), text-white
+Layout: 4-column grid on desktop (1-col mobile, 2-col tablet)
+
+Column 1 — Brand:
+  - Logo + Company name + tagline (same as header).
+  - Short description: "Pakistan's premium solar energy provider, delivering
+    cutting-edge solar solutions for homes and businesses."
+  - Social icons: Facebook, Twitter, Instagram, LinkedIn (hover → green-400).
+
+Column 2 — Quick Links:
+  - Home, Services, Portfolio, About, Products, Contact
+  - Each links to the corresponding page via onNavigate().
+
+Column 3 — Our Services (static text list):
+  - Solar Panels Installation
+  - Solar Inverters
+  - Complete Solar Systems
+  - Solar Batteries & UPS
+  - Mounting Structures
+  - Solar Maintenance
+
+Column 4 — Contact Info:
+  - Location: Karachi, Pakistan (MapPin icon, green-400)
+  - Email: Ecosolenergiespak@gmail.com (Mail icon, green-400, clickable)
+  - Phone: +92 XXX XXXXXXX (Phone icon, green-400)
+
+Bottom Bar:
+  - © [Current Year] ECO-SOL ENERGIES. All rights reserved.
+  - Links: Privacy Policy | Terms of Service (hover → green-400)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6: HOME PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/Home.tsx
+Page ID: 'home'
+
+--- SECTION 6.1: Hero Section ---
+  Background: Gradient (green-50 via white to yellow-50) + faint solar panel
+  photo overlay (opacity-5, from Pexels).
+  Badge: "Pakistan's Premium Solar Energy Provider" (green pill)
+  Heading (H1):
+    "Power Your Future"
+    "With Clean Energy" (green gradient text)
+  Sub-text: "Premium solar panels, inverters, and complete solar solutions
+    for homes and businesses across Pakistan"
+  CTA Buttons:
+    - "Get Free Site Survey" → navigates to 'contact'
+    - "Explore Solutions"    → navigates to 'services'
+
+--- SECTION 6.2: What We Offer ---
+  Title: "What We Offer"
+  Sub: "Comprehensive solar energy solutions designed for maximum efficiency
+    and reliability"
+  4 service cards (icon + title + description):
+    1. Solar Panel Installation — "Premium quality solar panels with maximum
+       efficiency and durability for residential and commercial properties."
+    2. Solar Inverters — "Advanced inverter systems for on-grid, off-grid,
+       and hybrid solar solutions with intelligent power management."
+    3. Complete Solar Systems — "End-to-end solar power solutions tailored to
+       your energy needs with professional installation and support."
+    4. Batteries & Backup — "High-capacity solar batteries and backup systems
+       ensuring uninterrupted power supply for your home or business."
+  Link: "View All Services →" → navigates to 'services'
+
+--- SECTION 6.3: Our Projects (Portfolio Preview) ---
+  Title: "Our Projects"
+  Sub: "Transforming Pakistan's energy landscape, one installation at a time"
+  6 placeholder project cards (green gradient backgrounds + Sun icon):
+    Each shows: "Solar Installation #N" + "Residential / Commercial Project"
+  Button: "View Complete Portfolio" → navigates to 'portfolio'
+
+--- SECTION 6.4: Why Choose ECO-SOL ENERGIES? ---
+  Left column — Text:
+    Title: "Why Choose ECO-SOL ENERGIES?"
+    Body: "We are committed to delivering premium solar solutions with
+      unmatched quality, expertise, and customer service."
+    6 checkbox bullets:
+      ✓ Premium Quality Products
+      ✓ 10+ Years Experience
+      ✓ Professional Installation
+      ✓ Nationwide Service
+      ✓ After-Sales Support
+      ✓ Competitive Pricing
+    Link: "Learn More About Us →" → navigates to 'about'
+  Right column — Stats card (green gradient box):
+    500+  Projects Completed
+    50MW+ Power Installed
+    98%   Client Satisfaction
+    10+   Years Experience
+
+--- SECTION 6.5: Client Testimonials ---
+  Title: "What Our Clients Say"
+  Sub: "Real experiences from satisfied customers across Pakistan"
+  3 testimonial cards (5-star rating each):
+    1. Ahmed Khan (Residential Client):
+       "ECO-SOL ENERGIES transformed our home with a complete solar solution.
+        Professional service and excellent results!"
+    2. Fatima Malik (Business Owner):
+       "Outstanding solar installation for our commercial facility.
+        Significant reduction in electricity costs within months."
+    3. Hassan Ali (Homeowner):
+       "Highly recommend their services. Quality products, expert team,
+        and transparent pricing. Very satisfied!"
+
+--- SECTION 6.6: FAQ (Frequently Asked Questions) ---
+  Title: "Frequently Asked Questions"
+  Sub: "Everything you need to know about our solar solutions"
+  4 FAQ items:
+    Q: What is the cost of a complete solar system?
+    A: The cost varies based on your energy requirements. Contact us for a
+       free site survey and customized quote.
+
+    Q: How long does installation take?
+    A: Most residential installations are completed within 2-3 days.
+       Commercial projects vary based on scale.
+
+    Q: Do you provide maintenance services?
+    A: Yes, we offer comprehensive maintenance packages to ensure optimal
+       performance of your solar system.
+
+    Q: What warranties do you offer?
+    A: Our solar panels come with 25-year performance warranties, and
+       inverters with 5-10 year warranties.
+
+--- SECTION 6.7: Final CTA Banner ---
+  Background: green-600 to green-800 gradient
+  Title: "Ready to Go Solar?"
+  Sub: "Get a free site survey and customized solar solution for your property"
+  Button: "Request Free Quote" → navigates to 'contact'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7: SERVICES PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/Services.tsx
+Page ID: 'services'
+
+Hero:
+  Badge: "Our Services"
+  H1: "Solar Solutions for Every Need"
+  Sub: "From solar panels to complete power systems, we provide comprehensive
+    solutions backed by expertise and quality"
+
+6 Detailed Service Sections (alternating left-right layout):
+Each section shows: icon, title, description, "Get Quote" button (→ contact)
+  and a "Key Features" list on the opposite side.
+
+  SERVICE 1: Solar Panel Installation
+    Description: Professional installation of high-efficiency solar panels
+      for residential and commercial properties.
+    Features:
+      - Monocrystalline and Polycrystalline panels
+      - Maximum efficiency ratings up to 22%
+      - 25-year performance warranty
+      - Professional site assessment
+      - Optimized panel positioning
+      - Complete installation and testing
+
+  SERVICE 2: Solar Inverters
+    Description: Advanced inverter systems for seamless conversion of solar
+      energy to usable power.
+    Features:
+      - On-Grid inverter systems
+      - Off-Grid inverter solutions
+      - Hybrid inverter technology
+      - Smart monitoring capabilities
+      - Maximum power point tracking (MPPT)
+      - 5-10 year manufacturer warranties
+
+  SERVICE 3: Complete Solar Systems
+    Description: Turnkey solar power solutions designed to meet your specific
+      energy requirements.
+    Features:
+      - Customized system design
+      - Net metering solutions
+      - Grid-tied systems
+      - Standalone solar systems
+      - Professional installation
+      - Post-installation support
+
+  SERVICE 4: Solar Batteries & UPS
+    Description: High-capacity energy storage solutions for uninterrupted
+      power supply.
+    Features:
+      - Deep cycle solar batteries
+      - Lithium-ion battery systems
+      - Tubular gel batteries
+      - UPS integration
+      - Backup power solutions
+      - Long lifecycle batteries
+
+  SERVICE 5: Mounting Structures
+    Description: Durable and weather-resistant mounting systems for secure
+      solar panel installation.
+    Features:
+      - Rooftop mounting systems
+      - Ground-mounted structures
+      - Solar canopy installations
+      - Corrosion-resistant materials
+      - Wind load certified
+      - Professional installation
+
+  SERVICE 6: Maintenance & Support
+    Description: Comprehensive maintenance services to ensure optimal
+      performance of your solar system.
+    Features:
+      - Regular system inspections
+      - Panel cleaning services
+      - Performance monitoring
+      - Troubleshooting and repairs
+      - 24/7 customer support
+      - Extended warranty options
+
+Bottom CTA:
+  Title: "Need a Custom Solution?"
+  Sub: "Our experts will design a tailored solar solution based on your
+    specific energy requirements and budget"
+  Button: "Schedule Free Consultation" → navigates to 'contact'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8: PORTFOLIO PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/Portfolio.tsx
+Page ID: 'portfolio'
+
+Hero:
+  Badge: "Our Portfolio"
+  H1: "Powering Pakistan One Project at a Time"
+  Sub: "Explore our successful solar installations across residential,
+    commercial, and industrial sectors"
+
+Stats Bar (4 KPIs):
+  500+    Completed Projects
+  50MW+   Total Capacity Installed
+  15+     Cities Served
+  98%     Client Satisfaction
+
+6 Featured Projects (card grid, 3 columns desktop):
+
+  PROJECT 1:
+    Type: Residential
+    Title: Luxury Villa Solar Installation
+    Location: DHA Phase 6, Karachi
+    Capacity: 15 kW
+    Year: 2025
+    Description: Complete on-grid solar system with premium monocrystalline
+      panels and hybrid inverter.
+
+  PROJECT 2:
+    Type: Commercial
+    Title: Office Building Solar Project
+    Location: Clifton, Karachi
+    Capacity: 50 kW
+    Year: 2025
+    Description: Large-scale commercial installation with net metering and
+      advanced monitoring.
+
+  PROJECT 3:
+    Type: Residential
+    Title: Modern Home Solar System
+    Location: Gulshan-e-Iqbal, Karachi
+    Capacity: 10 kW
+    Year: 2025
+    Description: Off-grid solar solution with battery backup for complete
+      energy independence.
+
+  PROJECT 4:
+    Type: Industrial
+    Title: Manufacturing Unit Solar
+    Location: SITE Area, Karachi
+    Capacity: 100 kW
+    Year: 2024
+    Description: Industrial-scale solar installation reducing operational
+      costs by 60%.
+
+  PROJECT 5:
+    Type: Commercial
+    Title: Shopping Complex Solar
+    Location: Bahria Town, Karachi
+    Capacity: 75 kW
+    Year: 2024
+    Description: Grid-tied solar system with smart energy management and
+      monitoring.
+
+  PROJECT 6:
+    Type: Residential
+    Title: Farmhouse Solar Installation
+    Location: Super Highway, Karachi
+    Capacity: 20 kW
+    Year: 2024
+    Description: Hybrid solar system with generator integration and solar
+      canopy.
+
+Bottom CTA:
+  Title: "Start Your Solar Journey"
+  Sub: "Join hundreds of satisfied clients who have switched to clean,
+    sustainable solar energy"
+  Buttons:
+    - "Get Free Quote"  → navigates to 'contact'
+    - "View Services"   → navigates to 'services'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 9: ABOUT PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/About.tsx
+Page ID: 'about'
+
+Hero:
+  Badge: "About Us"
+  H1: "Leading Pakistan's Solar Revolution"
+  Sub: "A decade of excellence in delivering premium solar energy solutions
+    across Pakistan"
+
+Who We Are (2-column):
+  Left — Company story paragraphs:
+    "ECO-SOL ENERGIES is Pakistan's premier solar energy company,
+    headquartered in Karachi. Since 2014, we have been at the forefront of
+    the country's transition to clean, renewable energy."
+    "We specialize in providing high-quality solar panels, advanced inverters,
+    and complete solar power systems for residential, commercial, and
+    industrial clients across Pakistan."
+    "Our commitment to excellence, combined with cutting-edge technology and
+    unparalleled customer service, has made us the trusted choice for hundreds
+    of satisfied clients."
+  Right — Two highlighted boxes:
+    Vision (green card): "To be Pakistan's leading solar energy provider,
+      empowering every home and business with clean, sustainable, and
+      affordable energy solutions."
+    Mission (yellow card): "To deliver premium solar solutions that exceed
+      expectations, reduce energy costs, and contribute to a cleaner, greener
+      Pakistan."
+
+Core Values (4 cards):
+  1. Quality First    — "We never compromise on the quality of our products
+     and services."
+  2. Customer Focused — "Your satisfaction and energy goals are at the heart
+     of everything we do."
+  3. Excellence       — "Committed to delivering exceptional results on every
+     project."
+  4. Innovation       — "Staying ahead with the latest solar technology and
+     solutions."
+
+Company Journey / Timeline (alternating layout, vertical line):
+  2014 — Company Founded           → ECO-SOL ENERGIES established in Karachi
+  2017 — 100+ Projects             → Completed our 100th solar installation
+  2020 — Nationwide Expansion      → Expanded services across Pakistan
+  2023 — 50MW Milestone            → Achieved 50MW+ total installed capacity
+  2025 — Industry Leader           → Recognized as premium solar provider
+
+Our Team (3 capability cards):
+  1. Technical Expertise   — Certified engineers with 10+ years of solar
+     installation experience
+  2. Quality Assurance     — Rigorous testing and quality control at every
+     stage
+  3. Customer Support      — 24/7 support team ensuring your solar system
+     runs smoothly
+
+Bottom CTA:
+  Title: "Ready to Make the Switch?"
+  Sub: "Join us in building a sustainable future powered by clean solar energy"
+  Button: "Get Started Today" → navigates to 'contact'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 10: PRODUCTS PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/Products.tsx
+Page ID: 'products'
+
+Hero:
+  Badge: "Our Products"
+  H1: "Premium Solar Products & Components"
+  Sub: "We trade only the highest quality solar equipment from world-renowned
+    manufacturers"
+
+6 Product Categories (card with icon, category name, description, specs,
+  and Available Products sub-grid):
+
+  CATEGORY 1: Solar Panels
+    Description: Premium quality photovoltaic panels from world-leading
+      manufacturers
+    Specs:
+      - Efficiency: Up to 22%
+      - Warranty: 25 Years
+      - Certified: IEC, TUV
+    Products:
+      - Monocrystalline Solar Panels (300W - 550W)
+      - Polycrystalline Solar Panels (250W - 400W)
+      - Bifacial Solar Modules
+      - Half-Cut Cell Technology Panels
+      - High-Efficiency PERC Panels
+      - All-Black Aesthetic Panels
+
+  CATEGORY 2: Solar Inverters
+    Description: Advanced power conversion systems for maximum efficiency
+      and reliability
+    Specs:
+      - Efficiency: Up to 98%
+      - MPPT Technology
+      - Grid Compliance
+    Products:
+      - On-Grid String Inverters (3kW - 100kW)
+      - Off-Grid Inverters with Built-in Charger
+      - Hybrid Solar Inverters
+      - Microinverters for Module-Level Optimization
+      - Central Inverters for Large-Scale Projects
+      - Smart Inverters with WiFi Monitoring
+
+  CATEGORY 3: Solar Batteries & UPS
+    Description: High-capacity energy storage solutions for backup and
+      off-grid systems
+    Specs:
+      - Long Life Cycle
+      - Deep Discharge
+      - Temperature Resistant
+    Products:
+      - Deep Cycle Tubular Batteries (100Ah - 250Ah)
+      - Lithium-Ion Battery Systems (5kWh - 20kWh)
+      - Gel Batteries for Solar Applications
+      - Solar UPS Systems (1kVA - 10kVA)
+      - Battery Management Systems (BMS)
+      - Maintenance-Free AGM Batteries
+
+  CATEGORY 4: Mounting Structures
+    Description: Durable and weather-resistant systems for secure panel
+      installation
+    Specs:
+      - Wind Load Certified
+      - Corrosion Resistant
+      - 25-Year Durability
+    Products:
+      - Rooftop Mounting Kits (Aluminum & Galvanized)
+      - Ground-Mount Structures
+      - Solar Canopy Systems
+      - Adjustable Tilt Mounting
+      - Ballasted Mounting Systems
+      - Tracking Systems (Single & Dual Axis)
+
+  CATEGORY 5: Cables & Accessories
+    Description: Complete range of electrical components for solar installations
+    Specs:
+      - UV Resistant
+      - Flame Retardant
+      - UL Certified
+    Products:
+      - Solar DC Cables (4mm² - 16mm²)
+      - MC4 Connectors & Junction Boxes
+      - AC/DC Distribution Panels
+      - Circuit Breakers & Surge Protection
+      - Earthing & Lightning Protection
+      - Cable Management Systems
+
+  CATEGORY 6: Solar Gadgets
+    Description: Innovative solar-powered devices and monitoring solutions
+    Specs:
+      - Smart Features
+      - Remote Monitoring
+      - Plug & Play
+    Products:
+      - Solar Monitoring Systems
+      - Smart Energy Meters
+      - Solar Water Pumps
+      - Solar Lighting Solutions
+      - Portable Solar Generators
+      - Solar Charge Controllers (PWM & MPPT)
+
+Trusted Brands (12 brands in a card grid):
+  Longi Solar, Jinko Solar, Canadian Solar, Trina Solar,
+  Huawei, SMA, Fronius, Growatt,
+  Tesla Powerwall, BYD, LG Chem, Pylontech
+
+Bottom CTA:
+  Title: "Need Product Recommendations?"
+  Sub: "Our experts will help you choose the perfect products for your solar
+    installation"
+  Button: "Speak with an Expert" → navigates to 'contact'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 11: CONTACT PAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/pages/Contact.tsx
+Page ID: 'contact'
+
+Hero:
+  Badge: "Contact Us"
+  H1: "Let's Discuss Your Solar Solution"
+  Sub: "Get in touch with our team for a free consultation and customized
+    solar solution"
+
+Two-column layout:
+  LEFT COLUMN — Contact Information:
+    Location:
+      Karachi, Pakistan
+      Serving clients nationwide
+
+    Email:
+      Ecosolenergiespak@gmail.com
+      (clickable mailto link)
+
+    Phone:
+      +92 XXX XXXXXXX
+      Mon-Sat: 9:00 AM - 6:00 PM
+
+    "Why Contact Us?" card (green):
+      ✓ Free site survey and consultation
+      ✓ Customized solar solutions
+      ✓ Transparent pricing and quotes
+      ✓ Expert technical guidance
+      ✓ Fast response times
+
+  RIGHT COLUMN — Contact Form:
+    Heading: "Send Us a Message"
+    Form Fields (all required):
+      - Full Name        (text input)
+      - Email Address    (email input)
+      - Phone Number     (tel input, placeholder: "+92 XXX XXXXXXX")
+      - Message          (textarea, 5 rows, placeholder: "Tell us about your
+                          solar energy needs...")
+    Submit Button: "Send Message" (with Send icon)
+
+    Form State:
+      - Success: "Message sent successfully! We'll get back to you within
+        24 hours." (green banner)
+      - Error: "Failed to send message. Please try again or email us
+        directly." (red banner)
+      - Loading: Button text changes to "Sending..."
+
+    Backend: Form data is submitted to Supabase table 'contact_inquiries',
+      inserting: { name, email, phone, message }
+
+Bottom CTA:
+  Title: "Prefer to Visit Us?"
+  Sub: "Schedule an appointment at our Karachi office for an in-person
+    consultation"
+  Buttons:
+    - "Email Us"      → links to mailto:Ecosolenergiespak@gmail.com
+    - "View Services" → navigates to 'services'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 12: BACKEND — SUPABASE INTEGRATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+File: src/lib/supabase.ts
+
+The Supabase client is initialized with:
+  - VITE_SUPABASE_URL     (from .env file)
+  - VITE_SUPABASE_ANON_KEY (from .env file)
+
+Database Table Used:
+  Table: contact_inquiries
+  Columns:
+    - name    (text)
+    - email   (text)
+    - phone   (text)
+    - message (text)
+
+Usage:
+  Only one DB interaction in the app: on contact form submission,
+  a new row is inserted into 'contact_inquiries'.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 13: CTA (CALL TO ACTION) MAP — ALL BUTTONS & LINKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HEADER:
+  Logo                          → 'home'
+  Nav: Home                     → 'home'
+  Nav: Services                 → 'services'
+  Nav: Portfolio                → 'portfolio'
+  Nav: About                    → 'about'
+  Nav: Products                 → 'products'
+  Nav: Contact                  → 'contact'
+  "Get Free Site Survey"        → 'contact'
+
+HOME PAGE:
+  "Get Free Site Survey"        → 'contact'
+  "Explore Solutions"           → 'services'
+  "View All Services →"         → 'services'
+  "View Complete Portfolio"     → 'portfolio'
+  "Learn More About Us →"       → 'about'
+  "Request Free Quote"          → 'contact'
+
+SERVICES PAGE:
+  "Get Quote" (×6 services)    → 'contact'
+  "Schedule Free Consultation"  → 'contact'
+
+PORTFOLIO PAGE:
+  "Get Free Quote"              → 'contact'
+  "View Services"               → 'services'
+
+ABOUT PAGE:
+  "Get Started Today"           → 'contact'
+
+PRODUCTS PAGE:
+  "Speak with an Expert"        → 'contact'
+
+CONTACT PAGE:
+  "Email Us"                    → mailto:Ecosolenergiespak@gmail.com
+  "View Services"               → 'services'
+
+FOOTER:
+  Quick Links (all 6 pages)     → respective page
+  Email                         → mailto:Ecosolenergiespak@gmail.com
+  Social icons (4)              → "#" (placeholder, no real links yet)
+  Privacy Policy                → "#" (placeholder)
+  Terms of Service              → "#" (placeholder)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 14: KNOWN PLACEHOLDERS / ITEMS TO FILL IN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The following items in the website currently use placeholder values and
+need to be updated with real data before going live:
+
+  1. Phone Number       — Currently "+92 XXX XXXXXXX", needs real number.
+  2. Social Media URLs  — All social links point to "#" (no real profiles yet).
+  3. Privacy Policy     — Button exists but has no target page/URL.
+  4. Terms of Service   — Button exists but has no target page/URL.
+  5. Portfolio Images   — Project cards use green gradient placeholders instead
+                          of real project photos.
+  6. Home Portfolio Grid — 6 placeholder solar installation cards with no
+                           real images or project details.
+  7. Supabase Env Vars  — VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY must
+                          be set in the .env file for the contact form to work.
+
+================================================================================
+END OF CONTEXT DOCUMENT
+================================================================================
